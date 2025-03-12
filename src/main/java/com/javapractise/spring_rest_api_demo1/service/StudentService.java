@@ -5,6 +5,6 @@ import com.javapractise.spring_rest_api_demo1.bean.StudentDTO;
 
 public interface StudentService {
 
-	public void createStudent(StudentDTO studentDTO);
+	public int createStudent(StudentDTO studentDTO);
 	public StudentDTO getStudent(int studentId);
 }

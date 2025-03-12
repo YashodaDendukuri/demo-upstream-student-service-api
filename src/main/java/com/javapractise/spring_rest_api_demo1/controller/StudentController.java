@@ -41,9 +41,9 @@ public class StudentController {
 	}
 	
 	@PostMapping("/students")
-	public ResponseEntity<StudentDTO> registerStudent(@Valid @RequestBody StudentDTO studentDTO){
+	public ResponseEntity<String> registerStudent(@Valid @RequestBody StudentDTO studentDTO){
 		System.err.println(studentDTO);
-		studentService.createStudent(studentDTO);
-		return ResponseEntity.status(HttpStatus.CREATED).body(studentDTO);
+		int id = studentService.createStudent(studentDTO);
+		return ResponseEntity.status(HttpStatus.CREATED).body("Student Registered with id"+id);
 	}
 }
