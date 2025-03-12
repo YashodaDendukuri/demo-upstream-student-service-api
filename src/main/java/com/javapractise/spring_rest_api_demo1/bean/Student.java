@@ -22,6 +22,9 @@ public class Student {
 	
 	private String university;
 
+	public Student() {
+		
+	}
 	public Student(String name, String email,String collegeName,String university) {
 		super();
 		this.name = name;
@@ -41,5 +44,15 @@ public class Student {
 	public String getEmail() {
 		return email;
 	}
+
+	public String getCollegeName() {
+		return collegeName;
+	}
+
+	public String getUniversity() {
+		return university;
+	}
+
+	
 
 }

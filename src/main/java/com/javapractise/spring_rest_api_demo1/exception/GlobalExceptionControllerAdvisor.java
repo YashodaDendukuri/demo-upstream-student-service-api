@@ -21,8 +21,13 @@ public class GlobalExceptionControllerAdvisor extends ResponseEntityExceptionHan
 		return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(new ErrorMessage(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage()));
 	}
 	
-	@ExceptionHandler(CustomerNotRegisteredException.class)
-	public ResponseEntity<ErrorMessage> handleCustomerServiceDownException(CustomerNotRegisteredException ex){
+	@ExceptionHandler(StudentNotFoundException.class)
+	public ResponseEntity<ErrorMessage> handleStudentNotFoundException(StudentNotRegisteredException ex){
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorMessage(HttpStatus.NOT_FOUND, ex.getMessage()));
+	}
+	
+	@ExceptionHandler(StudentNotRegisteredException.class)
+	public ResponseEntity<ErrorMessage> handleStudentServiceDownException(StudentNotRegisteredException ex){
 		return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(new ErrorMessage(HttpStatus.SERVICE_UNAVAILABLE, ex.getMessage()));
 	}
 	

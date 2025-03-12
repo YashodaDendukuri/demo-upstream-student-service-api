@@ -1,13 +1,13 @@
 package com.javapractise.spring_rest_api_demo1.exception;
 
-public class CustomerNotRegisteredException extends RuntimeException {
+public class StudentNotRegisteredException extends RuntimeException {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public CustomerNotRegisteredException(Exception e) {
+	public StudentNotRegisteredException(Exception e) {
 		super(e);
 	}
 }
